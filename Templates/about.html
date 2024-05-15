@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>E-Store for sale</title>
+        <!-- font Awesome by me-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+        <!-- font Awesome-->
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
+
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+
+    <body>
+        <section id="header">
+            <a href="#"><img style="width: 70px;" src="img/logo21.png" class="logo" alt="">
+
+            <div>
+                <ul id="navbar">
+                    <li><a class="active" href="{{ url_for('index') }}">Home</a></li>
+                    <li><a href="{{ url_for('route.shop') }}">Shop</a></li>
+                    <li><a href="{{ url_for('route.blog') }}">Blog</a></li>
+                    <li><a href="{{ url_for('route.about') }}">About</a></li>
+                    <li><a href="{{ url_for('route.contact') }}">Contact</a></li>
+                    <li id="lg-bag"><a href="{{ url_for('route.cart') }}"><i class="far fa-shopping-bag"></i></a></li>
+                    <a id="close" href="#"><i class="fas fa-times"></i></a>
+                </ul>
+            </div>
+            <div id="mobile">
+                <a href="cart.html"><i class="far fa-shopping-bag"></i></a>
+                <i id="bar" class="fas fa-outdent"></i>
+            </div>
+        </section>
+        <h1>About Page</h1>
+        <span>comming soon</span>
+
+
+            <div class="copyright">
+                <p>&copy; 2024 LamTech. All rights reserved.</p>
+            </div>
+          </footer>
+        <script src="script.js"></script>
+    </body>
+
+</html>

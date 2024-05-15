@@ -11,7 +11,7 @@
         <!-- font Awesome-->
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
 
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     </head>
 
     <body>
@@ -20,12 +20,12 @@
 
             <div>
                 <ul id="navbar">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a  class="active" href="shop.html">Shop</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li id="lg-bag"><a href="cart.html"><i class="far fa-shopping-bag"></i></a></li>
+                    <li><a class="active" href="{{ url_for('index') }}">Home</a></li>
+                    <li><a href="{{ url_for('route.shop') }}">Shop</a></li>
+                    <li><a href="{{ url_for('route.blog') }}">Blog</a></li>
+                    <li><a href="{{ url_for('route.about') }}">About</a></li>
+                    <li><a href="{{ url_for('route.contact') }}">Contact</a></li>
+                    <li id="lg-bag"><a href="{{ url_for('route.cart') }}"><i class="far fa-shopping-bag"></i></a></li>
                     <a id="close" href="#"><i class="fas fa-times"></i></a>
                 </ul>
             </div>
@@ -35,15 +35,47 @@
             </div>
         </section>
 
-        <section id="page-header">
-            <h2>#stayhome</h2>
+        <section id="hero">
+            <h4>Trade-in-offer</h4>
+            <h2>Super value deals</h2>
+            <h1>On all products</h1>
             <p>Save more with coupons & up to 70% off!</p>
+            <a href="#feature" class="hero-btn">Shop Now</a>
+        </section>
+
+        <section id="feature" class="section-p1">
+            <div class="fe-box">
+                <img src="{{ url_for('static', filename='img/features/f1.png') }}" alt="">
+                <h6>Free Shipping</h6>
+            </div>
+            <div class="fe-box">
+                <img src="{{ url_for('static', filename='img/features/f2.png') }}" alt="">
+                <h6>Online Order</h6>
+            </div>
+            <div class="fe-box">
+                <img src="{{ url_for('static', filename='img/features/f3.png') }}" alt="">
+                <h6>Save Money</h6>
+            </div>
+            <div class="fe-box">
+                <img src="{{ url_for('static', filename='img/features/f4.png') }}" alt="">
+                <h6>Promotions</h6>
+            </div>
+            <div class="fe-box">
+                <img src="{{ url_for('static', filename='img/features/f5.png') }}" alt="">
+                <h6>Happy Sell</h6>
+            </div>
+            <div class="fe-box">
+                <img src="{{ url_for('static', filename='img/features/f6.png') }}" alt="">
+                <h6>F24/7 Support</h6>
+            </div>
         </section>
 
         <section id="product1" class="section-p1">
+            <h2>Feature Products</h2>
+            <p>Summer Collection New Morden Design</p>
             <div class="pro-container">
-                <div class="pro" onclick="window.location.href='sproduct.html';">
-                    <img src="img/products/f1.jpg">
+                <div class="pro">
+                <img src="{{ url_for('static', filename='img/products/f1.jpg') }}" alt="">
                     <div class="des">
                         <span>adidas</span>
                         <h5>Cartoon Astronut T-shirts</h5>
@@ -59,7 +91,7 @@
                     <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
                 </div>
                 <div class="pro">
-                    <img src="img/products/f2.jpg">
+                <img src="{{ url_for('static', filename='img/products/f2.jpg') }}" alt="">
                     <div class="des">
                         <span>adidas</span>
                         <h5>Cartoon Astronut T-shirts</h5>
@@ -75,7 +107,7 @@
                     <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
                 </div>
                 <div class="pro">
-                    <img src="img/products/f3.jpg">
+                <img src="{{ url_for('static', filename='img/products/f3.jpg') }}" alt="">
                     <div class="des">
                         <span>adidas</span>
                         <h5>Cartoon Astronut T-shirts</h5>
@@ -91,7 +123,7 @@
                     <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
                 </div>
                 <div class="pro">
-                    <img src="img/products/f4.jpg">
+                <img src="{{ url_for('static', filename='img/products/f4.jpg') }}" alt="">
                     <div class="des">
                         <span>adidas</span>
                         <h5>Cartoon Astronut T-shirts</h5>
@@ -107,7 +139,7 @@
                     <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
                 </div>
                 <div class="pro">
-                    <img src="img/products/f5.jpg">
+                <img src="{{ url_for('static', filename='img/products/f5.jpg') }}" alt="">
                     <div class="des">
                         <span>adidas</span>
                         <h5>Cartoon Astronut T-shirts</h5>
@@ -123,7 +155,7 @@
                     <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
                 </div>
                 <div class="pro">
-                    <img src="img/products/f6.jpg">
+                <img src="{{ url_for('static', filename='img/products/f6.jpg') }}" alt="">
                     <div class="des">
                         <span>adidas</span>
                         <h5>Cartoon Astronut T-shirts</h5>
@@ -139,7 +171,7 @@
                     <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
                 </div>
                 <div class="pro">
-                    <img src="img/products/f7.jpg">
+                <img src="{{ url_for('static', filename='img/products/f7.jpg') }}" alt="">
                     <div class="des">
                         <span>adidas</span>
                         <h5>Cartoon Astronut T-shirts</h5>
@@ -155,7 +187,7 @@
                     <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
                 </div>
                 <div class="pro">
-                    <img src="img/products/f8.jpg">
+                <img src="{{ url_for('static', filename='img/products/f8.jpg') }}" alt="">
                     <div class="des">
                         <span>adidas</span>
                         <h5>Cartoon Astronut T-shirts</h5>
@@ -170,9 +202,21 @@
                     </div>
                     <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
                 </div>
+            </div>
+        </section>
 
+        <section id="banner" class="section-m1">
+            <h4>Repair Services</h4>
+            <h2>Up to <span>70% off</span> - All t-Shirts & Accessories</h2>
+            <button class="normal">Explore More</button>
+        </section>
+
+        <section id="product1" class="section-p1">
+            <h2>New Arrivals</h2>
+            <p>Summer Collection New Morden Design</p>
+            <div class="pro-container">
                 <div class="pro">
-                    <img src="img/products/n1.jpg">
+                <img src="{{ url_for('static', filename='img/products/n1.jpg') }}" alt="">
                     <div class="des">
                         <span>adidas</span>
                         <h5>Cartoon Astronut T-shirts</h5>
@@ -188,7 +232,7 @@
                     <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
                 </div>
                 <div class="pro">
-                    <img src="img/products/n2.jpg">
+                <img src="{{ url_for('static', filename='img/products/n2.jpg') }}" alt="">
                     <div class="des">
                         <span>adidas</span>
                         <h5>Cartoon Astronut T-shirts</h5>
@@ -204,7 +248,7 @@
                     <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
                 </div>
                 <div class="pro">
-                    <img src="img/products/n3.jpg">
+                <img src="{{ url_for('static', filename='img/products/n3.jpg') }}" alt="">
                     <div class="des">
                         <span>adidas</span>
                         <h5>Cartoon Astronut T-shirts</h5>
@@ -220,6 +264,7 @@
                     <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
                 </div>
                 <div class="pro">
+                <img src="{{ url_for('static', filename='img/products/n4.jpg') }}" alt="">
                     <img src="img/products/n4.jpg">
                     <div class="des">
                         <span>adidas</span>
@@ -236,7 +281,7 @@
                     <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
                 </div>
                 <div class="pro">
-                    <img src="img/products/n5.jpg">
+                <img src="{{ url_for('static', filename='img/products/n5.jpg') }}" alt="">
                     <div class="des">
                         <span>adidas</span>
                         <h5>Cartoon Astronut T-shirts</h5>
@@ -252,7 +297,7 @@
                     <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
                 </div>
                 <div class="pro">
-                    <img src="img/products/n6.jpg">
+                <img src="{{ url_for('static', filename='img/products/n6.jpg') }}" alt="">
                     <div class="des">
                         <span>adidas</span>
                         <h5>Cartoon Astronut T-shirts</h5>
@@ -268,7 +313,7 @@
                     <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
                 </div>
                 <div class="pro">
-                    <img src="img/products/n7.jpg">
+                <img src="{{ url_for('static', filename='img/products/n7.jpg') }}" alt="">
                     <div class="des">
                         <span>adidas</span>
                         <h5>Cartoon Astronut T-shirts</h5>
@@ -284,7 +329,7 @@
                     <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
                 </div>
                 <div class="pro">
-                    <img src="img/products/n8.jpg">
+                <img src="{{ url_for('static', filename='img/products/n8.jpg') }}" alt="">
                     <div class="des">
                         <span>adidas</span>
                         <h5>Cartoon Astronut T-shirts</h5>
@@ -302,10 +347,34 @@
             </div>
         </section>
 
-        <section id="pagination" class="section-p1">
-            <a href="#">1</a>
-            <a href="#">2</a>
-            <a href="#"><i class="fal fa-long-arrow-alt-right"></i></a>
+        <section id="sm-banner" class="section-p1">
+            <div class="banner-box">
+                <h4>crazy deals</h4>
+                <h2>buy 1 get 1 free</h2>
+                <span>The best classic dress is on sale at cara</span>
+                <button class="white">Learn More</button>
+            </div>
+            <div class="banner-box banner-box2">
+                <h4>spring/summer</h4>
+                <h2>upcoming season</h2>
+                <span>The best classic dress is on sale at cara</span>
+                <button class="white">Collection</button>
+            </div>
+        </section>
+
+        <section id="banner3">
+            <div class="banner-box">
+                <h2>SEASONAL SALE</h2>
+                <h3>Winter Collection -50% OFF</h3>
+            </div>
+            <div class="banner-box banner-box2">
+                <h2>NEW FOOTWEAR COLLECTION</h2>
+                <h3>spring / summer 2023</h3>
+            </div>
+            <div class="banner-box banner-box3">
+                <h2>T-SHIRTS</h2>
+                <h3>New Trendy Prints</h3>
+            </div>
         </section>
 
         <section id="newsletter" class="section-p1" class="section-m1">
@@ -321,7 +390,7 @@
 
         <footer class="section-p1">
             <div class="col">
-                <img style="width: 70px;" src="img/logo21.png" class="logo" alt="">
+                <img style="width: 70px;" src="{{ url_for('static', filename='img/logo21.png') }}" class='logo' alt="">
                 <h4>Contact</h4>
                 <p><strong>Address:</strong> 562 Chicken Farm Field, Jacob Town, paynesville, Liberia.</p>
                 <p><strong>Phone:</strong> +231778602978/ +231880588769</p>
@@ -360,15 +429,16 @@
                 <h4>Install App</h4>
                 <p>From App Store or Google Play</p>
                 <div class="row">
-                    <img src="img/pay/app.jpg" alt="">
-                    <img src="img/pay/play.jpg" alt="">
+                <img src="{{ url_for('static', filename='img/pay/app.jpg') }}" class='logo' alt="">
+                <img src="{{ url_for('static', filename='img/pay/play.jpg') }}" class='logo' alt="">
                 </div>
                 <p>Secured Payment Gateways</p>
+                <img src="{{ url_for('static', filename='img/pay/pay.png') }}" class='logo' alt="">
                 <img src="img/pay/pay.png" alt="">
             </div>
 
             <div class="copyright">
-                <p>Made with love by Kabah J.</p>
+                <p>&copy; 2024 LamTech. All rights reserved.</p>
             </div>
         </footer>
 

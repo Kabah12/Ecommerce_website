@@ -117,7 +117,7 @@ body {
   color: #088178;
 }
 
-#navbar li a.active::after, 
+#navbar li a.active::after,
 #navbar li a:hover::after{
   content: "";
   width: 30%;
@@ -159,7 +159,7 @@ body {
   color: #088178;
 }
 
-#hero button{
+#hero .hero-btn{
    background-image: url("img/button.png");
    background-color: transparent;
    color: #088178;
@@ -168,8 +168,8 @@ body {
    cursor: pointer;
    font-weight: 700;
    font-size: 15px;
+   text-decoration: none;
 }
-
 #feature{
   display: flex;
   align-items: center;
@@ -294,7 +294,7 @@ body {
   background-color: #e8f6ea;
   font-weight: 500;
   color: 3088178;
-  border: 1px solid $cce7d0;
+  border: 1px solid;
   position: absolute;
   bottom: 20px;
   right: 10px;
@@ -373,7 +373,7 @@ body {
   color: #fff;
   font-size: 14px;
   font-weight: 500;
-  padding-bottom: 15px;  
+  padding-bottom: 15px;
 }
 
 #sm-banner .banner-box:hover button{
